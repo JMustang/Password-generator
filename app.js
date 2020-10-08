@@ -10,28 +10,29 @@ const generateEl = document.getElementById("generate");
 const upperLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const lowerLetters = "abcdefghijklmnopqrstuvwxyz";
 const numbers = "0123456789";
-const symbools = "!@#$%¨&*()_+=";
+const symbools = "!@#$%¨&*(){}[]_+=-.<>;:/|?!";
 
-function getUppercase() {
+const getUppercase = () => {
     return upperLetters[Math.floor(Math.random() * upperLetters.length)];
 }
 
-function getLowercase() {
+const getLowercase = () => {
     return lowerLetters[Math.floor(Math.random() * lowerLetters.length)];
 }
 
-function getNumber() {
+const getNumber = () => {
     return numbers[Math.floor(Math.random() * numbers.length)];
 }
 
-function getSymbol() {
+const getSymbol = () => {
     return symbools[Math.floor(Math.random() * symbools.length)];
 }
 
-function generatePassword() {
+const generatePassword = () => {
     const len = lenEl.value;
 
     let password = "";
+
     if (upperEl.checked) {
         password += getUppercase();
     }
@@ -54,7 +55,7 @@ function generatePassword() {
     pwEl.innerText = password;
 }
 
-function generateX() {
+const generateX = () => {
     const xs = [];
     if (upperEl.checked) {
         xs.push(getUppercase())
