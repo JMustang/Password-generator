@@ -81,6 +81,10 @@ body {
     padding: 1rem;
     width: 100%;
     margin-top: 1rem;
+    transition: transform 450ms;
+}
+.generate:hover {
+    transform: scale(1.03);
 }
 
 
